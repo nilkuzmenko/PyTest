@@ -3,7 +3,7 @@
 
 import pytest
 from selenium import webdriver
-import time
+#import time
 
 #WARNING To run the test correctly, you must use a new web adress!
 link = "http://qa-assignment.oblakogroup.ru/board/:nil21"
