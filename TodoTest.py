@@ -5,8 +5,8 @@ import pytest
 from selenium import webdriver
 #import time
 
-#WARNING To run the test correctly, you must use a new web adress!
-link = "http://qa-assignment.oblakogroup.ru/board/:nil21"
+#WARNING To run the test correctly, you must use a new blank page!
+link = "http://qa-assignment.oblakogroup.ru/board/:nilk"
 
 
 @pytest.fixture
