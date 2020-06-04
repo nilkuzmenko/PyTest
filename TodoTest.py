@@ -3,11 +3,10 @@
 
 import pytest
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 import time
 
 #WARNING To run the test correctly, you must use a new web adress!
-link = "http://qa-assignment.oblakogroup.ru/board/:nilk"
+link = "http://qa-assignment.oblakogroup.ru/board/:nil21"
 
 
 @pytest.fixture
@@ -45,13 +44,13 @@ class TestMainPage():
     def test_project_title_appearance_check(self, browser):
         browser.find_element_by_css_selector("#add_new_todo").click() #add new
         browser.find_element_by_css_selector(".selection").click() #click on the dropmenu
-        browser.find_element(By.XPATH, '//li[text()="Создать новый список"]').click()
+        browser.find_element_by_xpath('//li[text()="Создать новый список"]').click()
         browser.find_element_by_css_selector("#project_title").click() #click on the project title field
 
     def test_calcel_button_working_when_new_list_selected(self, browser):
         browser.find_element_by_css_selector("#add_new_todo").click() #add new
         browser.find_element_by_css_selector(".selection").click() #click on the dropmenu
-        browser.find_element(By.XPATH, '//li[text()="Создать новый список"]').click()
+        browser.find_element_by_xpath('//li[text()="Создать новый список"]').click()
         browser.find_element_by_css_selector(".hide_btn").click()  # cancel button
 
     def test_new_category_1_task_a(self, browser):
@@ -59,7 +58,7 @@ class TestMainPage():
         task="a"
         browser.find_element_by_css_selector("#add_new_todo").click() #add new
         browser.find_element_by_css_selector(".selection").click() #click on the dropmenu
-        browser.find_element(By.XPATH, '//li[text()="Создать новый список"]').click()
+        browser.find_element_by_xpath('//li[text()="Создать новый список"]').click()
         browser.find_element_by_css_selector("#project_title").click()  #list title field
         browser.find_element_by_css_selector("#project_title").send_keys(title)  #list title field
         browser.find_element_by_css_selector("#project_text").click()  #task field
@@ -74,7 +73,7 @@ class TestMainPage():
         task="1"
         browser.find_element_by_css_selector("#add_new_todo").click() #add new
         browser.find_element_by_css_selector(".selection").click() #click on the dropmenu
-        browser.find_element(By.XPATH, '//li[text()="Создать новый список"]').click()
+        browser.find_element_by_xpath('//li[text()="Создать новый список"]').click()
         browser.find_element_by_css_selector("#project_title").click()  #list title field
         browser.find_element_by_css_selector("#project_title").send_keys(title)  #list title field
         browser.find_element_by_css_selector("#project_text").click()  #task field
@@ -89,7 +88,7 @@ class TestMainPage():
         task="1"
         browser.find_element_by_css_selector("#add_new_todo").click() #add new
         browser.find_element_by_css_selector(".selection").click() #click on the dropmenu
-        browser.find_element(By.XPATH, '//li[text()="Создать новый список"]').click()
+        browser.find_element_by_xpath('//li[text()="Создать новый список"]').click()
         browser.find_element_by_css_selector("#project_title").click()  #list title field
         browser.find_element_by_css_selector("#project_title").send_keys(title)  #list title field
         browser.find_element_by_css_selector("#project_text").click()  #task field
@@ -104,7 +103,7 @@ class TestMainPage():
         task="1"
         browser.find_element_by_css_selector("#add_new_todo").click() #add new
         browser.find_element_by_css_selector(".selection").click() #click on the dropmenu
-        browser.find_element(By.XPATH, '//li[text()="Создать новый список"]').click()
+        browser.find_element_by_xpath('//li[text()="Создать новый список"]').click()
         browser.find_element_by_css_selector("#project_title").click()  #list title field
         browser.find_element_by_css_selector("#project_title").send_keys(title)  #list title field
         browser.find_element_by_css_selector("#project_text").click()  #task field
@@ -119,7 +118,7 @@ class TestMainPage():
         task = "b"
         browser.find_element_by_css_selector("#add_new_todo").click()  # add new
         browser.find_element_by_css_selector(".selection").click()  # click on the dropmenu
-        browser.find_element(By.XPATH, '//li[text()="Создать новый список"]').click()
+        browser.find_element_by_xpath('//li[text()="Создать новый список"]').click()
         browser.find_element_by_css_selector("#project_title").click()  # list title field
         browser.find_element_by_css_selector("#project_title").send_keys(title)  # list title field
         browser.find_element_by_css_selector("#project_text").click()  # task field
@@ -137,7 +136,7 @@ class TestMainPage():
         task = "A"
         browser.find_element_by_css_selector("#add_new_todo").click()  # add new
         browser.find_element_by_css_selector(".selection").click()  # click on the dropmenu
-        browser.find_element(By.XPATH, '//li[text()="Создать новый список"]').click()
+        browser.find_element_by_xpath('//li[text()="Создать новый список"]').click()
         browser.find_element_by_css_selector("#project_title").click()  # list title field
         browser.find_element_by_css_selector("#project_title").send_keys(title)  # list title field
         browser.find_element_by_css_selector("#project_text").click()  # task field
@@ -155,7 +154,7 @@ class TestMainPage():
         task = "А"
         browser.find_element_by_css_selector("#add_new_todo").click()  # add new
         browser.find_element_by_css_selector(".selection").click()  # click on the dropmenu
-        browser.find_element(By.XPATH, '//li[text()="Создать новый список"]').click()
+        browser.find_element_by_xpath('//li[text()="Создать новый список"]').click()
         browser.find_element_by_css_selector("#project_title").click()  # list title field
         browser.find_element_by_css_selector("#project_title").send_keys(title)  # list title field
         browser.find_element_by_css_selector("#project_text").click()  # task field
@@ -175,7 +174,7 @@ class TestMainPage():
         count_items_before = len(browser.find_elements_by_css_selector('#todo_text'))
         browser.find_element_by_css_selector("#add_new_todo").click()  # add new
         browser.find_element_by_css_selector(".selection").click()  # click on the dropmenu
-        browser.find_element(By.XPATH, '//li[text()="Создать новый список"]').click()
+        browser.find_element_by_xpath('//li[text()="Создать новый список"]').click()
         browser.find_element_by_css_selector("#project_title").click()  # list title field
       # browser.find_element_by_css_selector("#project_title").send_keys(title)  # list title field
         browser.find_element_by_css_selector("#project_text").click()  # task field
@@ -194,7 +193,7 @@ class TestMainPage():
         count_items_before = len(browser.find_elements_by_css_selector('#todo_text'))
         browser.find_element_by_css_selector("#add_new_todo").click()  # add new
         browser.find_element_by_css_selector(".selection").click()  # click on the dropmenu
-        browser.find_element(By.XPATH, '//li[text()="Создать новый список"]').click()
+        browser.find_element_by_xpath('//li[text()="Создать новый список"]').click()
         browser.find_element_by_css_selector("#project_title").click()  # list title field
         browser.find_element_by_css_selector("#project_title").send_keys(title)  # list title field
         browser.find_element_by_css_selector("#project_text").click()  # task field
@@ -214,7 +213,7 @@ class TestMainPage():
         count_items_before = len(browser.find_elements_by_css_selector('#todo_text'))
         browser.find_element_by_css_selector("#add_new_todo").click()  # add new
         browser.find_element_by_css_selector(".selection").click()  # click on the dropmenu
-        browser.find_element(By.XPATH, '//li[text()="Создать новый список"]').click()
+        browser.find_element_by_xpath('//li[text()="Создать новый список"]').click()
         browser.find_element_by_css_selector("#project_title").click()  # list title field
       # browser.find_element_by_css_selector("#project_title").send_keys(title)  # list title field
         browser.find_element_by_css_selector("#project_text").click()  # task field
